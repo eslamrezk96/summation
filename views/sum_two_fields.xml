@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="sum_two_fields_form" model="ir.ui.view">
+            <field name="name">Sum Two Fields Form</field>
+            <field name="model">sum.two.fields</field>
+            <field name="arch" type="xml">
+                <form string="Sum">
+                    <sheet>
+                        <group>
+                            <field name="salary"/>
+                            <field name="reward"/>
+                            <field name="summation" readonly="1"/>
+                            <field name="summation" invisible="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="sum_two_fields_tree" model="ir.ui.view">
+            <field name="name">Sum Two Fields Tree</field>
+            <field name="model">sum.two.fields</field>
+            <field name="arch" type="xml">
+                <tree string="Sum">
+                    <field name="salary"/>
+                    <field name="reward"/>
+                    <field name="summation" readonly="1"/>
+                    <field name="summation" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+        <record id="sum_two_fields_action" model="ir.actions.act_window">
+            <field name="name">Sum Two Fields</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sum.two.fields</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+        <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+        <menuitem id="sum_two_fields_root" name="Summation" sequence="1"/>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="sum_two_fields_menu"
+                  name="Sum Two Fields"
+                  parent="sum_two_fields_root"
+                  action="sum_two_fields_action"
+                  sequence="2"/>
+    </data>
+</odoo>
