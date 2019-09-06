@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="summation.list">
+      <field name="name">summation list</field>
+      <field name="model">summation.summation</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="summation.action_window">
+      <field name="name">summation window</field>
+      <field name="res_model">summation.summation</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="summation.action_server">
+      <field name="name">summation server</field>
+      <field name="model_id" ref="model_summation_summation"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="summation" id="summation.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="summation.menu_1" parent="summation.menu_root"/>
+    <menuitem name="Menu 2" id="summation.menu_2" parent="summation.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="summation.menu_1_list" parent="summation.menu_1"
+              action="summation.action_window"/>
+    <menuitem name="Server to list" id="summation" parent="summation.menu_2"
+              action="summation.action_server"/>
+    -->
+  </data>
+</odoo>
