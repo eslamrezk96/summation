@@ -25,8 +25,7 @@
                 <tree string="Sum">
                     <field name="salary"/>
                     <field name="reward"/>
-                    <field name="summation" readonly="1"/>
-                    <field name="summation" invisible="1"/>
+                    <field name="summation"/>
                 </tree>
             </field>
         </record>
